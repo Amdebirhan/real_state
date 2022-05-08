@@ -34,6 +34,7 @@ export default function SearchFilters() {
     useEffect(() => {
         if (searchTerm !== '') {
             const fetchData = async () => {
+
                 setLoading(true);
                 const data = await fetchApi(`${baseUrl}/auto-complete?query=${searchTerm}`);
                 setLoading(false);
